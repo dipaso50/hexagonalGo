@@ -9,6 +9,8 @@ type Video struct {
 //VideoRepo for database operations
 type VideoRepo interface {
 	Save(Video) error
+	Select(uuid string) (*Video, error)
+	Update(Video) error
 }
 
 //NewVideo creates a video object
